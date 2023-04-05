@@ -208,52 +208,52 @@ html {
     left: 5%;
   }
 
-  .timeline2 {
+.timeline2 {
     position: absolute;
     top: 60%;
     left: 5%;
   }
-  .gender {
+.gender {
     position: absolute;
     top: 80%;
     left: 5%;
   }
 
-  .sicily {
+.sicily {
     position: absolute;
     width:8%;
     top: 77%;
     left: 64%;
   }
 
-.rome1 {
+.immensita {
     position: absolute;
     width:8%;
     top: 40%;
     left: 50%;
   }
-.roma {
+.cena {
     position: absolute;
     width:8%;
-    top: 50%;
+    top: 52%;
     left: 55%;
   }
-.palermo {
+.stranezza {
     position: absolute;
     width:8%;
     top: 75%;
     left: 56%;
   }
-.napoli {
+.nostalgia {
     position: absolute;
     width:8%;
     top: 43%;
     left: 62%;
   }
-.sardegna {
+.aria {
     position: absolute;
     width:8%;
-    top: 60%;
+    top: 52%;
     left: 31%;
 }
 .imagecontainer {
