@@ -52,95 +52,9 @@
     <div class="palermo"><button class="btn" onClick="document.getElementById('stranezza').scrollIntoView();"><img src="stranezza.png"></div>
     <div class="roma"><button class="btn" onClick="document.getElementById('cena').scrollIntoView();"><img src="cena.png"></div>
     <div class="napoli"><button class="btn" onClick="document.getElementById('nostalgia').scrollIntoView();"><img src="nostalgia.png"></div>
-    <div class="sardegna"><button class="btn" onClick="document.getElementById('aria').scrollIntoView();"><img src="aria.png"></div>
-
-    <div class="timeline1"><button class="btn" onClick="document.getElementById('timeline1').scrollIntoView();"><p class="t">Full Timeline</p></div>
-    <div class="timeline2"><button class="btn" onClick="document.getElementById('timeline2').scrollIntoView();"><p class="t">Short Timeline</p></div>
-    <div class="gender"><button class="btn" onClick="document.getElementById('gender').scrollIntoView();"><p class="t">Writers' Gender</p></div>
+    <div class="sardegna"><button class="btn" onClick="document.getElementById('aria').scrollIntoView();"><img src="aria.png"></div>        
   </div>
 
-    <hr class="my-3">
-    <!-- exploratory data visualizations of the dataset I created -->
-    <!-- first graph displaying the number of time each place is represented in the list -->
-    <h1>Real Places, Imagined Spaces<h1>
-    <div id='barplace'><img id="small" src="/graphs/place.png" width="10%"></div>
-    <!-- button allowing the user to view the python code I used to visualize this data -->
-    <div><button class="btn" onClick="document.getElementById('codeplace').scrollIntoView();"><p class="t">See Code</p></div>
-    <hr class="my-3">
-
-    <!-- use chart.js to display the number of words in some of these authors' texts in an interactive fashion-->
-    <!-- Hovering over the bars reveals the number of words in each text represented -->
-    <h1>Word Count</h1>
-    <canvas id="wordsinthecanon"></canvas>
-    <script>
-      const ctx = document.getElementById('wordsinthecanon');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ["Dante's Comedy", "Manzoni's Betrothed", "Verga's Malavoglia", "Svevo's Zeno", "Lampedusa's Gattopardo"],
-          datasets: [{
-            label: 'How long are these texts?',
-            data: [83134, 217399, 87424, 141363, 72941],
-            borderWidth: 4
-          }]
-        },
-        options: {
-          indexAxis: 'y',
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
-        }
-      });
-    </script>
-
-    <hr class="my-3">
-
-    <!-- third graph: a timeline showing the relation between the year of pubblication of every text in the reding list and the age of the author at the time of publishing -->
-    <div id='timeline1'><h3>Complete timeline</h3><img src="/graphs/timeline1.png" opacity="0.6">
-    <!-- button allowing the user to view the python code I used to visualize this data -->
-    <div><button class="btn" onClick="document.getElementById('code1').scrollIntoView();"><p class="t">See code</p></div>
-    <p>The outlier here is Moses who supposedly wrote Exodus and Genesis when he was roughly 150 years old. According to contemporary scholarship, both texts were written much later but I kept the traditional dating.</p>
-    <img class="img2" src="/graphs/matrix.png" opacity="0.6">
-    <!-- button allowing the user to 'return to the map' -->
-    <form>
-      <a class= "fixedbtn" href>
-        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
-      </a>
-    </form>
-
-    <hr class="my-3">
-
-    <!-- fourth graph: a shorter timeline where only Italian literary works are considered, thus excluding their Latin predecessors -->
-    <div id='timeline2'><h3>1200-2022 timeline</h3><img src="/graphs/timeline2.png" opacity="0.6">
-    <div><button class="btn" onClick="document.getElementById('code2').scrollIntoView();"><p class="t">See code</p></div>
-    <p>The graph shows the correlation between the age of the author at the time in which their canonical text was published and the year in which it was published. As the downward tendency shows, the average age of the authors included in the canon has decreased.
-      Meanwhile, the gap around the 17th and early 18th century displays the bias of the canon against the cultural products of this century and the extent to which the Seicento has been largely ignored in such gatherings, perhaps under the influence of Alessandro Manzoni and Benedetto Croce’s negative assessment of this century.
-    </p>
-    <p>Where are these 172 texts / their authors from? The great majority are from Northern Italy.
-      Overall, there is a strong bias toward metropolitan centers exercising a hegemonic hold over the peninsula such as Rome (which appears 5 times) and Florence (7).
-      In addition, the places were the authors are from often overlap with the settings of their work, but this is not always the case.</p>
-
-      <form>
-    <a class= "fixedbtn" href>
-      <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
-    </a>
-    </form>
-
-    <hr class="my-3">
-
-    <!-- fifth and sixth graph: a piechart and a barplot displaying the number of male and female authors in the text  -->
-    <div id='gender'><h3>Gender imbalance</h3>
-    <p>154 texts are authored by men, 18 by women.</p>
-    <img id="small" src="/graphs/gender.png" width="10%">
-    <div><button class="btn" onClick="document.getElementById('code3').scrollIntoView();"><p class="t">Source Code</p></div>
-    <p><a href="https://artflsrv04.uchicago.edu/cgi-bin/efts/textdbs/IWW/hub.py?type=author&browse=form&auth_allnames=&auth_alternames=&auth_titleofrespect=&auth_birthyear=&auth_deathyear=&auth_century=&auth_birthplace=&auth_deathplace=&auth_region=&auth_father=&auth_mother=&auth_class=&auth_maritalstatus=&auth_dateofmarriage=&auth_numbermarriages=&auth_husbands=&auth_lovers=&auth_maternalstatus=&auth_numberchildren=&auth_children=&auth_religion=&auth_education=&auth_occupation=&auth_prize=&auth_fulltext=ALL&auth_code=&sortorder=auth_authorname"> The Italian Women Writers database </a> lists 794 authors on its website.  The canon includes 18 texts authored by women. Meanwhile, the number of texts authored by men appearing in the canon is 153.</p>
-    <form>
-      <a class= "fixedbtn" href>
-        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
-      </a>
-    </form>
     <!-- first section dedicated to a single author -->
     <div id='aria'class="square"><h1>Ariaferma</h1>
       <h2>Roberto e </h2>
@@ -148,9 +62,8 @@
         <p></p>
         <p></p>
         <p></p>
-        <img class="img1" width="10%" src="/icons/aria.png"></div>
+        <img class="img1" width="10%" src="aria.png"></div>
         <p></p>
-        <h3>1320</h3>
         <p>time image.</p>
 
         <!-- button sending the author to the bottom of the page to the display the python code I used to calculate the coleman index of this work, merging the code we used for readability with opening and reading files in python -->
@@ -169,7 +82,7 @@
         <p></p>
         <p></p>
         <p></p>
-        <img class="img1" width="10%" src="/icons/immensita.png"></div>
+        <img class="img1" width="10%" src="immensita.png"></div>
         <p></p>
         <h3>2022</h3>
         <p>description</p>
@@ -190,7 +103,7 @@
             <p></p>
             <p></p>
             <p></p>
-            <img class="img1" src="/icons/stranezza.png"></div>
+            <img class="img1" src="stranezza.png"></div>
 
       <form>
         <a class= "fixedbtn" href>
@@ -202,7 +115,7 @@
 
     <div id='cena'class="square"><h1>La cena perfetta (Davide Minnella, 2022)</h1>
       <h2>Nico e Zach</h2>
-      <img class="img1" src="/icons/cena.png"></div>
+      <img class="img1" src="cena.png"></div>
       <p></p>
       <h3>2022</h3>
       <p>food.</p>
